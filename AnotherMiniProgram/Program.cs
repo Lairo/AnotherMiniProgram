@@ -6,24 +6,22 @@ using System.Threading.Tasks;
 
 namespace AnotherMiniProgram
 {
-    public enum ProductCodes
-    {
-        Milk = 0,
-        Juice = 1,
-        Tea = 2,
-    }
-
     internal class Program
     {
 
         static void Main(string[] args)
         {
-            ProductCodes test = ProductCodes.Tea;
-            Console.WriteLine((int)test);
+            var nameslist = new string[4, 2]
+            {
+                { "Daniel", "28y" },
+                { "John", "34y" },
+                { "Jane", "23y" },
+                { "Tobi", "25y" }
 
-            int test2 = (int)ProductCodes.Juice;
+            };
 
-            Console.WriteLine((ProductCodes)test2);
+            Console.WriteLine($"\n{nameslist[1,0]}");
+
         }
     }
 }
