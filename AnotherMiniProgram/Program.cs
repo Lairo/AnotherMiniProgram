@@ -11,17 +11,23 @@ namespace AnotherMiniProgram
 
         static void Main(string[] args)
         {
-            var nameslist = new string[4, 2]
-            {
-                { "Daniel", "28y" },
-                { "John", "34y" },
-                { "Jane", "23y" },
-                { "Tobi", "25y" }
+            var date01 = new DateTime(2023, 4, 26, 8, 30, 52);
+            Console.WriteLine(date01.AddDays(7));
 
-            };
+            var date02 = DateTime.Now;
+            var date03 = DateTime.UtcNow;
+            var date04 = DateTime.Today;
+            var date05 = date02 - date04;
 
-            Console.WriteLine($"\n{nameslist[1,0]}");
+            Console.WriteLine(date02);
+            Console.WriteLine(date03);
+            Console.WriteLine(date04.ToString("D"));
+            //Console.WriteLine(date05);
 
+            var tomorrow = date02.AddDays(-11);
+            //Console.WriteLine(tomorrow);
         }
+
+        
     }
 }
